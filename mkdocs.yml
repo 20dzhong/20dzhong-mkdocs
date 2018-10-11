@@ -16,6 +16,9 @@ nav:
   - C++/C:
     - Basics: cBasics.md
 
+  - Machine Learning:
+    - Basics:
+
 theme:
   name: 'material'
   # Don't include MkDocs' JavaScript

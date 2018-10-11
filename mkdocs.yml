@@ -1,1 +1,17 @@
-site_name: My Docs
+site_name: D_records
+site_description: Documentation for Donovan's Programming Journey
+site_author: Donovan Zhong
+
+repo_url: https://github.com/20dzhong/20dzhong-mkdocs.git
+
+nav:
+  - Home: index.md
+  - Java:
+    - Basics: javaBasic.md
+    - Inheritance: inheritance.md
+
+  - Python:
+    - Etc: pythonExtra.md
+
+  - C++/C:
+    - Basics: cBasics.md

@@ -17,7 +17,7 @@ nav:
     - Basics: cBasics.md
 
   - Machine Learning:
-    - Basics:
+    - Basics: mlBasic.md
 
 theme:
   name: 'material'

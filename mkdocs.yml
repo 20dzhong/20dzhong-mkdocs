@@ -1,4 +1,4 @@
-site_name: D_records
+site_name: Records
 site_description: Documentation for Donovan's Programming Journey
 site_author: Donovan Zhong
 
@@ -15,3 +15,20 @@ nav:
 
   - C++/C:
     - Basics: cBasics.md
+
+theme:
+  name: 'material'
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: false
+  language: en
+  feature:
+    tabs: false
+  palette:
+    primary: blue grey
+    accent: blue grey
+  font:
+    text: Roboto
+    code: Roboto Mono
+  logo: 'images/gothub.png'
+  favicon: 'images/gothub.ico'

@@ -1,17 +1,10 @@
-# Welcome to MkDocs
+# Welcome to Donovan's Documentation
 
-For full documentation visit [mkdocs.org](https://mkdocs.org).
+This site will be used to document my journey through programming starting from the very basics, it will include FRC 
+and Robotic information as well, hope you find it useful.
 
-## Commands
+# Learning Resources:
+* Machine Learning Resources (In Depth): https://www.deeplearning.ai/
+* Machine Learning Resources (Quick and Useful): http://www.fast.ai/
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+* Intro to Python (Paul has the access code): https://codehs.com/info/curriculum/intropython 

@@ -9,7 +9,7 @@ nav:
   - Java:
     - Basics: javaBasic.md
     - Inheritance: inheritance.md
-     - Hashmaps: javaHashmap.md
+    - Hashmaps: javaHashmap.md
 
   - Python:
     - Lambdas: pyLambda.md
@@ -37,3 +37,28 @@ theme:
     code: Roboto Mono
   logo: 'images/gothub.png'
   favicon: 'images/gothub.ico'
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      linenums: true
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+google_analytics: ['UA-90285378-1', 'auto']

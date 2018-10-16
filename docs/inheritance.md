@@ -1,6 +1,9 @@
 # Inheritance
 
-* Inheritance is one of the main principles of object-oriented programming
+Inheritance is one of the main principles of object-oriented programming, inheritance allows one class to inherit 
+features from another class.
+
+When a subclass inherits from a superclass, the subclass can access public variables and functions from the super class 
 
 ## Inheritance Basics
 
@@ -10,87 +13,55 @@
 !!! note "Example through *class animal*"
 
     ```java
-    // animal is the superclass of frog
-    public class animal {
-        String name;
-        String food;
-        private String livespan;
-    
-        void printInfo() {
-            System.out.println(name + " has an average lifespan of " + livespan + " and eats " + food + " as its primary food source. ");
+        // animal is the superclass of frog
+        public class animal {
+            String name;
+            String food;
+            private String livespan;
+        
+            void printInfo() {
+                System.out.println(name + " has an average lifespan of " + livespan  +
+                        " and eats " + food + " as its primary food source. ");
         }
-    }
-    
-    // class frog is a subclass of animal
-    class frog extends animal {
-        String color;
-        boolean isPoisonous;
-    
-        void isdangerous() {
-            System.out.println("frog is poisonous: " + isPoisonous);
+        
+        // class frog is a subclass of animal
+        class frog extends animal {
+            String color;
+            boolean isPoisonous;
+        
+            void isdangerous() {
+                System.out.println("frog is poisonous: " + isPoisonous);
+            }
         }
-    }
-    
-    class test{
-        public static void main(String args[]) {
-            frog dartFrog = new frog();
-    
-            // object dartFrog has access to variables and functions within dangerous
-            dartFrog.isPoisonous = true;
-            dartFrog.color = "red";
-            dartFrog.isdangerous();
-    
-            // object dartFrog also has access to variables and functions in animal
-            dartFrog.name = "okopipi";
-            dartFrog.food = "ants";
-    
-            // dartFrog.livespan will not work because the access is private
-            // dartFrog.livespan = "20";
+        
+        class test{
+            public static void main(String args[]) {
+                frog dartFrog = new frog();
+        
+                // object dartFrog has access to variables and functions within dangerous
+                dartFrog.isPoisonous = true;
+                dartFrog.color = "red";
+                dartFrog.isdangerous();
+        
+                // object dartFrog also has access to variables and functions in animal
+                dartFrog.name = "okopipi";
+                dartFrog.food = "ants";
+        
+                // dartFrog.livespan will not work because the access is private
+                // dartFrog.livespan = "20";
+            }
         }
-    }
     ```
+In the above example, class *dartFrog* is a subclass of *animal*, and have all the features of an animal except for those
+that were declared **private**
 
-## ROS on Ubuntu
+However, class *animal* does not have access to any features within *dartFrog*
 
-Installation instructions are [here](http://wiki.ros.org/kinetic/Installation/Ubuntu)
+## The **super** keyword
 
-Install *ros-kinetic-desktop* in order to get rospy_tutorials.
+## Overriding methods
 
-!!! note "After installing *ros-kinetic-desktop* initialize `rosdep`"
+## Abstract Classes
 
-    ```bash
-    sudo rosdep init
-    rosdep update
-    ```
-
-!!! note "Install dependencies for building packages"
-
-    ```bash
-    sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential
-    ```
-
-## ROS on Raspi
-
-Use Ubuntu MATE, not Raspbian.
-
-Download Ubuntu MATE 16.04.2 from [here](https://ubuntu-mate.org/download/)
-
-## ROS on Jetson TX2
-
-!!! warning "If `sudo rosdep init` returns an error about a website being down"
-
-    ```bash
-    sudo c_rehash /etc/ss/certs
-    ```
- 
-## ROS on Docker
-
-!!! info "Run *roscore*"
-
-    ```bash
-    docker run -it --rm  -p11311:11311  ros roscore
-    ```
-
-
-
+## The **final** keyword 
 

@@ -9,8 +9,10 @@ nav:
   - Java:
     - Basics: javaBasic.md
     - Inheritance: inheritance.md
+     - Hashmaps: javaHashmap.md
 
   - Python:
+    - Lambdas: pyLambda.md
     - Etc: pythonExtra.md
 
   - C++/C:

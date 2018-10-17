@@ -237,8 +237,53 @@ In the example above, ``ColoredTriangle`` inherits from ``Triangle`` which inher
 It's also useful to know that constructors are executed in order of derivation, it always starts from the *source* superclass
 and find its way down since a superclass has no knowledge of any subclass. 
 
-Superclass References and Subclass 
 ## Overriding methods
+
+### Overriding example:
+Exactly how it sounds, when a method in a subclass has the same return type and signature as a method in the superclass,
+the subclass method will override the methods from the superclass, and the superclass version of the method will stay hidden.
+
+!!! note "Overriding example"
+    
+    ```java
+    class A {
+        int foo, bar;
+        A(int a, int b){
+            foo = a;
+            bar = b;
+        }
+    
+        //display foo and bar
+        void show(){
+            System.out.println(String.format("foo is: %s\n bar is: %s", foo, bar));
+        }
+    }
+    
+    class B extends A {
+        int fizz;
+    
+        B(int a, int b, int c) {
+            super(a, b);
+            fizz = c;
+        }
+    
+        @Override // denotes that something is being overidden
+        // displays the overridden print statement
+        void show() {
+            System.out.println(String.format("fizz is %s, show method has been overridden", fizz));
+        }
+    }
+    ```
+
+When ``show()`` is called on a **B** object, it will use **B**'s version of the ``show()`` method, because it overrides
+**A**'s ``show()`` method. If you want to access the superclass version of ``show()``, you can simply do ``super.show()``.
+
+Overriding only happens when the name and parameter of two methods are identical, if they're not, it simply becomes overloaded.
+
+Override is usually denoted by using ``@Override`` 
+
+### Dynamic Method Dispatch: 
+
 
 ## Abstract Classes
 

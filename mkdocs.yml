@@ -9,7 +9,6 @@ nav:
   - Java:
     - Basics: javaBasic.md
     - Inheritance: inheritance.md
-    - Hashmaps: javaHashmap.md
 
   - Python:
     - Lambdas: pyLambda.md
@@ -20,6 +19,11 @@ nav:
 
   - Machine Learning:
     - Basics: mlBasic.md
+
+  - Data Structures:
+      - Hashmaps: javaHashmap.md
+
+  - Github: git.md
 
 theme:
   name: 'material'

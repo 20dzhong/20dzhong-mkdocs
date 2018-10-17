@@ -17,10 +17,10 @@ When a subclass inherits from a superclass, the subclass can access public varia
         public class animal {
             String name;
             String food;
-            private String livespan;
+            private int lifespan;
         
             void printInfo() {
-                System.out.println(name + " has an average lifespan of " + livespan  +
+                System.out.println(name + " has an average lifespan of " + lifespan  +
                         " and eats " + food + " as its primary food source. ");
         }
         
@@ -55,10 +55,189 @@ When a subclass inherits from a superclass, the subclass can access public varia
 In the above example, class *dartFrog* is a subclass of *animal*, and have all the features of an animal except for those
 that were declared **private**
 
+* class *animal* has variables `name` and `food` and function `printInfo`, that means all classes that inherit from *animals*
+will have access `name`, `food`, and `printInfo`
+
 However, class *animal* does not have access to any features within *dartFrog*
 
+Private variables and functions cannot be access from anywhere outside of its class, however, a controlled way of accessing
+private members is to use an accessor method. 
+
+!!! note "Member Access"
+
+    ```java
+        // animal class
+        public class animal {
+            String name;
+            String food;
+            private int lifespan = 15;
+            
+            // setLifespan is within the class animal so it's able to access lifespan
+            void setLifespan(int time) {
+                 lifespan = time;
+            }
+        }
+        
+        class test{
+            public static void main(String args[]) {
+                animal cheetah = new animal();
+        
+                // and now, this line of code will work!
+                // the function setLifespan() will be able to access the variable lifespan
+                cheetah.setLifespan(10);
+            }
+        }
+    ```
+
+
+        
 ## The **super** keyword
 
+### As Constructors:
+A subclass can call a constructor by its superclass by using the keyword **super**
+
+!!! note "Constructing using Super"
+
+    ```java
+        // superclass shapes
+        class shapes {
+            private double width;
+            private double height;
+        
+            // Parameterized constructor for shapes
+            shapes(double w, double h) {
+                width = w;
+                height = h;
+            }
+        
+            // Accessor methods for width and height
+            double getWidth() { return width; }
+            double getHeight() { return height; }
+        }
+        
+        // subclass triangle inherits from shapes
+        class Triangle extends shapes {
+            private String style;
+        
+            // constructor for Triangle
+            Triangle(String s, double w, double h){
+                super(w, h); // <- super calls on the constructor for shapes and pass w, h into it
+                style = s;
+            }
+            
+            double area() {return (getWidth() * getHeight()) / 2.0;}
+        }
+    ```
+Here, ``super(w,h)`` changes the width and height in the superclass from the subclass.
+
+Any form of constructors defined by the superclass can be called by ``super()``. The constructor executed will be the one that matches the arguments, 
+very useful for overloading. 
+
+* For example ``super()`` will call on the default constructor with no parameters, ``super(w, h)`` will call on the constructor that has 
+those two parameters, and so on. 
+
+When a subclass calls ``super()`` it is calling the constructor of its immediate superclass, so this allows chaining constructors to be
+possible. Also, ``super()`` must always be the first statement executed inside a subclass constructor.
+
+### Access Superclass:
+
+You can also use **super** to access members of the superclass  
+
+* similar to the way **this** is being used, except it always refers to the immediate superclass of the subclass .
+
+* This is especially helpful when a member name of a subclass hides the member by the same name in the superclass, although hiding
+fields is discouraged.
+
+!!! note "Using super to access Superclass"
+
+    ```java 
+        // using super to overcome name hiding
+        class A {
+            int i;
+        }
+        
+        // subclass B inherits A
+        class B extends A {
+            int i; //local variable i hides i in superclass A
+            
+            // constructor
+            B(int a, int b) {
+                this.i = a; // i in subclass takes the value of a
+                super.i = b; // i in superclass takes the value of b
+            }
+        }    
+    ```
+    
+As shown above, ``i`` in ``B`` has the same name as ``i`` in ``A``, so the ``i`` in ``B`` will hide the ``i`` in ``A``
+and in this case, you can use``super`` to access the hidden variable.
+
+## Multilevel Hierarchy
+
+A demonstration of all the stuff from above. You can build as many layers of inheritance as you like, it's not limited to
+only 1 subclass and 1 superclass
+
+!!! note "Hierarchy example"
+
+    ```java
+        // superclass shapes
+        class shapes {
+            private double width;
+            private double height;
+            
+            // overloading constructors:
+            // default constructor
+            shapes() {
+                width = height = 0;
+            }
+        
+            // Parameterized constructor for shapes
+            shapes(double w, double h) {
+                width = w;
+                height = h;
+            }
+        
+            // Accessor methods for width and height
+            double getWidth() { return width; }
+            double getHeight() { return height; }
+        }
+        
+        // subclass triangle inherits from shapes
+        class Triangle extends shapes {
+            private String style;
+        
+            // default constructor
+            Triangle() {
+                super(); // calls the default constructor for shapes
+                style = "none";
+            }
+            
+            // constructor for Triangle
+            Triangle(String s, double w, double h){
+                super(w, h); // <- super calls on the constructor for shapes and pass w, h into it
+                style = s;
+            }
+        
+            double area() {return (getWidth() * getHeight()) / 2.0;}
+        }
+        
+        class ColorTriangle extends Triangle {
+            private String color;
+            
+            ColorTriangle(String c, String s, double w, double h) {
+                super(s, w, h); 
+                color = c; // <- only the color is unique to the class ColorTriangle,
+            }
+            
+            String getColor() { return color; }
+        }    
+    ```
+    
+In the example above, ``ColoredTriangle`` inherits from ``Triangle`` which inherits from ``Shapes``
+
+It's also useful to know that constructors are executed in order of derivation, it always starts from the *source* superclass
+and find its way down since a superclass has no knowledge of any subclass. 
+
+Superclass References and Subclass 
 ## Overriding methods
 
 ## Abstract Classes

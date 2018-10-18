@@ -13,8 +13,8 @@ When a subclass inherits from a superclass, the subclass can access public varia
 !!! note "Example through *class animal*"
 
     ```java
-        // animal is the superclass of frog
-        public class animal {
+        // Animal is the superclass of Frog
+        public class Animal {
             String name;
             String food;
             private int lifespan;
@@ -24,26 +24,26 @@ When a subclass inherits from a superclass, the subclass can access public varia
                         " and eats " + food + " as its primary food source. ");
         }
         
-        // class frog is a subclass of animal
-        class frog extends animal {
+        // class Frog is a subclass of Animal
+        class Frog extends Animal {
             String color;
-            boolean isPoisonous;
+            boolean poisonous;
         
-            void isdangerous() {
-                System.out.println("frog is poisonous: " + isPoisonous);
+            void isDangerous() {
+                System.out.println("Frog is poisonous: " + poisonous);
             }
         }
         
         class test{
             public static void main(String args[]) {
-                frog dartFrog = new frog();
+                Frog dartFrog = new Frog();
         
                 // object dartFrog has access to variables and functions within dangerous
-                dartFrog.isPoisonous = true;
+                dartFrog.poisonous = true;
                 dartFrog.color = "red";
-                dartFrog.isdangerous();
+                dartFrog.isDangerous();
         
-                // object dartFrog also has access to variables and functions in animal
+                // object dartFrog also has access to variables and functions in Animal
                 dartFrog.name = "okopipi";
                 dartFrog.food = "ants";
         
@@ -52,13 +52,13 @@ When a subclass inherits from a superclass, the subclass can access public varia
             }
         }
     ```
-In the above example, class *dartFrog* is a subclass of *animal*, and have all the features of an animal except for those
+In the above example, class *dartFrog* is a subclass of *Animal*, and have all the features of an Animal except for those
 that were declared **private**
 
-* class *animal* has variables `name` and `food` and function `printInfo`, that means all classes that inherit from *animals*
+* class *Animal* has variables `name` and `food` and function `printInfo`, that means all classes that inherit from *Animals*
 will have access `name`, `food`, and `printInfo`
 
-However, class *animal* does not have access to any features within *dartFrog*
+However, class *Animal* does not have access to any features within *dartFrog*
 
 Private variables and functions cannot be access from anywhere outside of its class, however, a controlled way of accessing
 private members is to use an accessor method. 
@@ -66,13 +66,13 @@ private members is to use an accessor method.
 !!! note "Member Access"
 
     ```java
-        // animal class
-        public class animal {
+        // Animal class
+        public class Animal {
             String name;
             String food;
             private int lifespan = 15;
             
-            // setLifespan is within the class animal so it's able to access lifespan
+            // setLifespan is within the class Animal so it's able to access lifespan
             void setLifespan(int time) {
                  lifespan = time;
             }
@@ -80,7 +80,7 @@ private members is to use an accessor method.
         
         class test{
             public static void main(String args[]) {
-                animal cheetah = new animal();
+                Animal cheetah = new Animal();
         
                 // and now, this line of code will work!
                 // the function setLifespan() will be able to access the variable lifespan
@@ -99,13 +99,13 @@ A subclass can call a constructor by its superclass by using the keyword **super
 !!! note "Constructing using Super"
 
     ```java
-        // superclass shapes
-        class shapes {
+        // superclass Shapes
+        class Shapes {
             private double width;
             private double height;
         
-            // Parameterized constructor for shapes
-            shapes(double w, double h) {
+            // Parameterized constructor for Shapes
+            Shapes(double w, double h) {
                 width = w;
                 height = h;
             }
@@ -115,13 +115,13 @@ A subclass can call a constructor by its superclass by using the keyword **super
             double getHeight() { return height; }
         }
         
-        // subclass triangle inherits from shapes
-        class Triangle extends shapes {
+        // subclass triangle inherits from Shapes
+        class Triangle extends Shapes {
             private String style;
         
             // constructor for Triangle
             Triangle(String s, double w, double h){
-                super(w, h); // <- super calls on the constructor for shapes and pass w, h into it
+                super(w, h); // <- super calls on the constructor for Shapes and pass w, h into it
                 style = s;
             }
             
@@ -179,19 +179,19 @@ only 1 subclass and 1 superclass
 !!! note "Hierarchy example"
 
     ```java
-        // superclass shapes
-        class shapes {
+        // superclass Shapes
+        class Shapes {
             private double width;
             private double height;
             
             // overloading constructors:
             // default constructor
-            shapes() {
+            Shapes() {
                 width = height = 0;
             }
         
-            // Parameterized constructor for shapes
-            shapes(double w, double h) {
+            // Parameterized constructor for Shapes
+            Shapes(double w, double h) {
                 width = w;
                 height = h;
             }
@@ -201,19 +201,19 @@ only 1 subclass and 1 superclass
             double getHeight() { return height; }
         }
         
-        // subclass triangle inherits from shapes
-        class Triangle extends shapes {
+        // subclass triangle inherits from Shapes
+        class Triangle extends Shapes {
             private String style;
         
             // default constructor
             Triangle() {
-                super(); // calls the default constructor for shapes
+                super(); // calls the default constructor for Shapes
                 style = "none";
             }
             
             // constructor for Triangle
             Triangle(String s, double w, double h){
-                super(w, h); // <- super calls on the constructor for shapes and pass w, h into it
+                super(w, h); // <- super calls on the constructor for Shapes and pass w, h into it
                 style = s;
             }
         

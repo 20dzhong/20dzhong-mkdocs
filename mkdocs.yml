@@ -1,5 +1,5 @@
 site_name: Records
-site_description: Documentation for Donovan's Programming Journey
+site_description: Documentation for programming things
 site_author: Donovan Zhong
 
 repo_url: https://github.com/20dzhong/20dzhong-mkdocs.git
@@ -21,7 +21,7 @@ nav:
     - Basics: mlBasic.md
 
   - Data Structures:
-      - Hashmaps: javaHashmap.md
+      - Hashing: javaHashing.md
 
   - Github: git.md
 

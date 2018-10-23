@@ -1,12 +1,23 @@
-Java Map API
-
 # Hashing
-not finished
+Hashing is made to speed up sorting process, for example, if an array is unsorted, a search in the array might take a long time
+since it's searching through all the element in the array. With Hashing, each object is given an index for ease of access.
 
-## Hashsets:
+More information on Hashing could be found online
+
+Hashtable and **Hashsets** are very common datatype that use hashing, but they are very different, here are some difference:
+
+* **Hashsets** implements the sets interface while **Hashmap** implement the map interface
+
+* **Hashsets** cannot contain duplicates, while in **Hashmap**, a duplicate will simply replace one another
+
+* **Hashmap** has a key and a value, much like dictionaries in python 
+
+* More info could be found online
+
+## **Hashsets**:
 
 Hashsets implement Sets interface
-!!! note "HashSet Examples"
+!!! note "HashSet Functions"
 
     ```java
     // Create a HashSet
@@ -38,11 +49,13 @@ Hashsets implement Sets interface
     // clears the set
     hset.clear();
     ```
+    
+Hashset does not allow duplicate values, if you try to add a repeated value, it will return false.
 
-## Hashmap
+## Hashmap:
 Hashmap implements Map interface 
 
-!!! note "Hashmap"
+!!! note "Hashmap Functions"
 
     ```java
     // create hashmap

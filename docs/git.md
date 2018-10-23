@@ -37,19 +37,20 @@ git add .
 
 * Commit your progress (save a checkpoint basically), the commit message can be whatever you want
 ```bash
-git commit -m "First Commit
+git commit -m "First Commit"
 ```
 
-* Link your local directory to your Github directory:
-    * if you are changing the link:
-    ```bash
-    git remote set-url origin https://github.com/JohnDoe/Repo
-    ```
-    
-    * if you are adding the link:
-    ```bash
-    git remote add origin https://github.com/JohnDoe/Repo    
-    ```
+!!! info "Setting up your url"
+    * Link your local directory to your Github directory:
+        * if you are changing the link:
+        ```bash
+        git remote set-url origin https://github.com/JohnDoe/Repo
+        ```
+        
+        * if you are adding the link:
+        ```bash
+        git remote add origin https://github.com/JohnDoe/Repo    
+        ```
 
 * Double check to make sure you have to right link
 ```bash

@@ -11,6 +11,7 @@ nav:
     - Inheritance: inheritance.md
 
   - Python:
+    - Basics: pyBasics.md
     - Lambdas: pyLambda.md
     - Etc: pythonExtra.md
 
@@ -24,6 +25,9 @@ nav:
       - Hashing: javaHashing.md
 
   - Github: git.md
+
+  - FRC Related:
+      - GradleIO Code: gradleSetup.md
 
 theme:
   name: 'material'

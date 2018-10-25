@@ -12,7 +12,7 @@ nav:
 
   - Python:
     - Basics: pyBasics.md
-    - Lambdas: pyLambda.md
+    - Functional Programming in Python: pyLambda.md
     - Etc: pythonExtra.md
 
   - C++/C:

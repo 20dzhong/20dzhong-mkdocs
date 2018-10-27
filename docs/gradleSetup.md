@@ -26,11 +26,12 @@ replace the ``TEAM`` number and the ```team0000``` number with **852** like I've
 * To build the Gradle Project, you need to open your terminal, it should be located on the bottom of IntelliJ (you can also use independent terminal if you know how to)
 ![Terminal](./images/terminal.PNG)
 
-* If ``src`` folder is not marked as source, mark it as source.
 
 !!! note "Window and Mac Setup Differs"
     * For **Windows**, simply type ``gradlew build`` in the terminal and you are done
     * For **Mac**, type ``chmod u+x gradlew`` into terminal to grant it the permissions to execute, then type in ``./gradlew``, then you are done.
+
+* Congrats, you are done, if ``src`` folder is not marked as source, mark it as source.
 
 
 ## Creating a new FRC Project
@@ -66,8 +67,8 @@ replace the ``TEAM`` number and the ```team0000``` number with **852** like I've
 * To build the Gradle Project, you need to open your terminal, it should be located on the bottom of IntelliJ (you can also use independent terminal if you know how to)
 ![Terminal](./images/terminal.PNG)
 
-* If ``src`` folder is not marked as source, mark it as source.
-
 !!! note "Window and Mac Setup Differs"
     * For **Windows**, simply type ``gradlew build`` in the terminal and you are done
     * For **Mac**, type ``chmod u+x gradlew`` into terminal to grant it the permissions to execute, then type in ``./gradlew``, then you are done.
+
+* Congrats, you are done, if ``src`` folder is not marked as source, mark it as source.

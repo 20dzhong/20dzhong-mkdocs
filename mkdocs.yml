@@ -27,7 +27,7 @@ nav:
   - Github: git.md
 
   - FRC Related:
-      - GradleIO Code: gradleSetup.md
+      - Project Setup: gradleSetup.md
 
 theme:
   name: 'material'

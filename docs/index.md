@@ -1,7 +1,7 @@
-# Welcome to Donovan's Documentation
+# Programming Documentation
 
 This site will be used to document my journey through programming starting from the very basics, it will include FRC 
-and Robotic information as well, hope you find it useful.
+and Robotic information as well.
 
 # Learning Resources:
 * Machine Learning Resources (In Depth): [https://www.deeplearning.ai](https://www.deeplearning.ai)
@@ -16,4 +16,4 @@ and Robotic information as well, hope you find it useful.
 * Python Lambdas: [https://20dzhong.github.io/pyLambda](https://20dzhong.github.io/pyLambda)
 * Hashing: [https://20dzhong.github.io/javaHashing/](https://20dzhong.github.io/javaHashing/)
 * Github Setup: [https://20dzhong.github.io/git/](https://20dzhong.github.io/git/)
-* FRC Project Setup: [https://20dzhong.github.io/gradleSetup.md](https://20dzhong.github.io/gradleSetup/)
+* FRC Project Setup: [https://20dzhong.github.io/gradleSetup](https://20dzhong.github.io/gradleSetup/)

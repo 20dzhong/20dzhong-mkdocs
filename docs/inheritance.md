@@ -282,10 +282,70 @@ Overriding only happens when the name and parameter of two methods are identical
 
 Override is usually denoted by using ``@Override`` 
 
-### Dynamic Method Dispatch: 
-
 
 ## Abstract Classes
 
-## The **final** keyword 
 
+In some cases, you would want a super class that defines only a generalized form of its subclass, that is when you would use a abstract class, think of it as a skeleton structure for a subclass.
+
+Abstract Classes are classes that contains abstract functions, and when a subclass inherits an abstract class, it must implement ALL of the abstract methods
+unless it itself is an abstract class, subclasses will continue to be abstract until all abstract methods are implemented. 
+   
+Take in consideration the Shape class, Shape class has an area() function, but every different shape has a different area formula. In this case, the abstract method
+states that there must be a area() functions for every subclass that inherits from the class shape
+
+!!! note "Abstract Method in an Abstract Class"
+
+    ```java
+    // unlike interfaces, abstract class can contain abstract methods and  implemented methods
+    abstract class Shape {
+        double width;
+        double height;
+        String name;
+    
+        Shape(double width, double height, String name) {
+            this.width = width;
+            this.height = height;
+            this.name = name;
+        }
+    
+        // abstract method area
+        abstract double area();
+    }
+    
+    
+    class Triangle extends Shape {
+        Triangle(double width, double height, String name) {
+            super(width, height, name);
+        }
+    
+        @Override
+        double area() {
+            return 0.5 * width * height;
+        }
+    }
+    
+    
+    class Rectangle extends Shape {
+        Rectangle(double width, double height, String name) {
+            super(width, height, name);
+        }
+    
+        @Override
+        double area() {
+            return width * height;
+        }
+    }
+    
+    
+    class Square extends Rectangle {
+        Square(double side, String name) {
+            super(side, side, name);
+        }
+    
+        @Override
+        final double area() {
+            return width * width;
+        }
+    }
+    ```

@@ -9,6 +9,7 @@ nav:
   - Java:
     - Basics: javaBasic.md
     - Inheritance: inheritance.md
+    - Packages and Interfaces: interface.md
 
   - Python:
     - Basics: pyBasics.md

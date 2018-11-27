@@ -3,13 +3,14 @@
 ## Creating and Building from an existing Project Method 1
 * Clone the project and put it in a desired directory
 
+* When opening the project, a window should pop up to ask you to import gradle setup, set it up as the picture below, note that the important part is to ``Use gradle 'wrapper' task config``
+![setup template](./images/gradlew_setup.PNG)
+
+* If everything goes correctly and you imported all the right stuff, that should be all you need to do 
+
 
 ## Creating and Building from an existing Project Method 2
 * Clone the project and put it in a desired directory
-* When opening the project, a window should pop up to ask you to import gradle setup, set it up as the picture below, note that the important part is to ``Use gradle 'wrapper' task config``
-![Example](./images/gradlew_setup.png)
-
-* If everything goes correctly and you imported all the right stuff, that should be all you need to do 
 
 ### 1. Installing Quickstart.zip
 * Go to [https://github.com/wpilibsuite/GradleRIO/blob/master/Quickstart.zip](https://github.com/wpilibsuite/GradleRIO/blob/master/Quickstart.zip) and install **Quickstart.zip**.

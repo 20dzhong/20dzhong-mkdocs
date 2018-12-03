@@ -7,7 +7,7 @@ repo_url: https://github.com/20dzhong/20dzhong-mkdocs.git
 nav:
   - Home: index.md
   - Java:
-    - Basics: javaBasic.md
+    - Etc: javaBasic.md
     - Inheritance: inheritance.md
     - Packages and Interfaces: interface.md
 
